@@ -6,7 +6,8 @@ import {Command, flags} from '@oclif/command'
 import {writeFileSync} from 'fs'
 import {prompt, easyCardBase} from './../util'
 export default class EasyCard extends Command {
-  static description = 'Build'
+  static description = 'Build adaptive cards interactively'
+  static hidden = true
 
   static examples = [
     '$ speedyhelper easycard',
@@ -15,8 +16,6 @@ export default class EasyCard extends Command {
   static flags = {
     file: flags.string({char: 'f', description: 'Save to this JSON file (defaults to cwd)'}),
   }
-
-  static hidden = false
 
   async run() {
     const {flags} = this.parse(EasyCard)
