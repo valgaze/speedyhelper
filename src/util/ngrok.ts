@@ -1,9 +1,11 @@
 import * as nGrok from 'ngrok'
 import {red, ascii_art, pickRandom} from '.'
 
-export async function nGrokTunnel(config?: any) {
+export async function nGrokTunnel(config?: NgrokOpts): Promise<string> {
   if (config && !config.addr) {
-    throw new Error('No Port specified')
+    if (!config.port) {
+      throw new Error('No Port specified')
+    }
   }
   try {
     const url = await nGrok.connect(config)
@@ -69,6 +71,7 @@ export interface NgrokOpts {
        * @default opts.port || opts.host || 80
        */
       addr?: string | number;
+	  port?: string | number;
 
       /**
        * HTTP Basic authentication for tunnel.
