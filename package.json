@@ -1,7 +1,7 @@
 {
   "name": "speedyhelper",
   "description": "A cli helper for speedybot, https://github.com/valgaze/speedybot",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": " @valgaze",
   "bin": {
     "speedyhelper": "./bin/run"
@@ -59,7 +59,9 @@
     "postpack": "rm -f oclif.manifest.json",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "oclif-dev readme && git add README.md",
+    "patch": "npx np patch",
+    "test:pack":"npm pack"
   },
   "types": "lib/index.d.ts"
 }
