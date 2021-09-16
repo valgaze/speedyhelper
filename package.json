@@ -1,7 +1,7 @@
 {
   "name": "speedyhelper",
   "description": "A cli helper for speedybot, https://github.com/valgaze/speedybot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": " @valgaze",
   "bin": {
     "speedyhelper": "./bin/run"
@@ -61,7 +61,7 @@
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md",
     "patch": "npx np patch",
-    "test:pack":"npm pack"
+    "test:pack": "npm pack"
   },
   "types": "lib/index.d.ts"
 }
