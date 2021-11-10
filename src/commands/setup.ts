@@ -99,6 +99,9 @@ export default class setup extends Command {
       directory = ans.choice ? ans.choice : repo
     }
 
+    if (!token) {
+      shouldLaunch = false
+    }
     const targetPath = resolve(process.cwd(), directory as string)
     const repoPath = this.repos[repo].url
     // TODO: execa, listr, fancy'ize, support multiple templates, etc
