@@ -1,7 +1,7 @@
 {
   "name": "speedyhelper",
   "description": "A cli helper for speedybot, https://github.com/valgaze/speedybot",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": " @valgaze",
   "bin": {
     "speedyhelper": "./bin/run"
